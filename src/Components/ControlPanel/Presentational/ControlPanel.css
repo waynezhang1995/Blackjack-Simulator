@@ -1,0 +1,9 @@
+.dock-bottom {
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+}
+
+.control-panel {
+    min-height: 300px;
+}
