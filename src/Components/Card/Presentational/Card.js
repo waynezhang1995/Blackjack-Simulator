@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import "./Card.css"
 
 const css = {
     cardBody: 'card-body',
+    cardNumer: 'card-number',
+    cardContent: 'card-content'
 };
 
 class CardBody extends Component {
 
     render() {
-      return (
-        <Card className={css.cardBody}>
-            <CardContent>
-                <Typography variant="h5" component="h2">
-                Test
-                </Typography>
-                <Typography component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
-        </Card>
-      );
+        const { number } = this.props;
+        return (
+            <Card className={css.cardBody}>
+                <div className={css.cardContent}>
+                    <span className={css.cardNumer}>
+                        {number}
+                    </span>
+                </div>
+            </Card>
+        );
     }
-  }
+}
 
 export default CardBody;

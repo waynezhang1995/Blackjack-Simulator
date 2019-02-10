@@ -18,4 +18,16 @@ const Shuffle = (array) => {
     return array;
 }
 
-export { Shuffle };
+const PrepareCards = (decks) => {
+    var base = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    var cards = [];
+    for (var i = 0; i < decks * 4; i++) {
+        cards = cards.concat(base)
+    }
+
+    return Shuffle(cards)
+}
+
+
+
+export { PrepareCards };

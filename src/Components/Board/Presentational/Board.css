@@ -1,0 +1,16 @@
+.board-seperator {
+    text-align: center;
+}
+
+.dealer-panel {
+    display: inline-flex;
+    text-align: center;
+}
+
+.board-wrapper {
+    display: inline-block;
+}
+
+.player-panel {
+    display: flex;
+}

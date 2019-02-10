@@ -7,3 +7,7 @@
 .control-panel {
     min-height: 300px;
 }
+
+.button-color {
+    color: red;
+}

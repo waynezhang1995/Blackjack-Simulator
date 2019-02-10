@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import Board from "./Components/Board/Board.js";
-import { createStore } from "redux";
-import { Provider } from 'react-redux'
-import Reducers from "./Reducers/index.js"
-import Appbar from "./Components/Appbar/Appbar.js"
-import ControlPanel from "./Components/ControlPanel/Presentational/ControlPanel.js";
+import BoardBody from './Components/Board/Container/Board.js';
+import Store from './Store/Store.js';
+import { Provider } from 'react-redux';
+import Appbar from './Components/Appbar/Appbar.js';
+import ControlPanelContainer from './Components/ControlPanel/Container/ControlPanel.js';
 import './App.css';
-
-const store = createStore(
-    Reducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
 
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <div className="App">
+      <Provider store={Store}>
+        <div className='App'>
           <Appbar></Appbar>
-          <Board></Board>
-          <ControlPanel></ControlPanel>
+          <BoardBody></BoardBody>
+          <ControlPanelContainer></ControlPanelContainer>
         </div>
       </Provider>
     );

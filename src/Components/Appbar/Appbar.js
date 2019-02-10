@@ -14,7 +14,7 @@ class Appbar extends Component {
         return (
             <AppBar className={css.headerCls} position="static">
                 <Toolbar>
-                    <Typography variant="h6" color="inherit">
+                    <Typography variant="title" color="inherit">
                         Blackjack Simulator
                     </Typography>
                 </Toolbar>

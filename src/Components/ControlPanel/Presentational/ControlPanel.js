@@ -3,37 +3,27 @@ import Grid from '@material-ui/core/Grid';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import "./ControlPanel.css"
 
 const css = {
     dockBottom: 'dock-bottom',
-    controlPanel: 'control-panel'
+    controlPanel: 'control-panel',
+    buttonColor: 'button-color'
 };
 
 class ControlPanel extends Component {
-    state = {
-        value: 0,
-    };
-
-    handleChange = (event, value) => {
-        this.setState({ value });
-    };
 
     render() {
-        const { value } = this.state;
+        const { loadCards, startGame } = this.props;
+
         return (
             <Grid item xs={12} className={css.dockBottom}>
-                <BottomNavigation
-                    value={value}
-                    onChange={this.handleChange}
-                    showLabels
-                // className={classes.root}
-                >
-                    <BottomNavigationAction label="Reload" icon={<RestoreIcon />} />
-                    <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                    <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+                <BottomNavigation showLabels>
+                    <BottomNavigationAction onClick={loadCards} label="Reload" icon={<RestoreIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={startGame} label="Start" icon={<PlayArrowIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction label="Nearby" icon={<LocationOnIcon style={{ fontSize: 30 }} />} />
                 </BottomNavigation>
             </Grid>
         );

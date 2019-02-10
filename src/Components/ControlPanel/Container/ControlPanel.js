@@ -1,19 +1,24 @@
 import { connect } from 'react-redux';
 import ControlPanel from '../Presentational/ControlPanel.js';
-import { setDeck, loadCards } from '../../../Actions/index.js';
+import { loadCards, resetCards, drawDealerCard } from '../../../Actions/ActionCreator.js';
 
-// const mapStateToProps = (state, ownProps) => ({
-//     // active: ownProps.filter === state.visibilityFilter
-// })
+const mapStateToProps = (state, ownProps) => {
+}
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-    loadCards: () => dispatch(setVisibilityFilter(ownProps.filter))
-})
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        loadCards: () => dispatch(loadCards()),
+        startGame: () => {
+            dispatch(resetCards());
+            dispatch(drawDealerCard());
+        }
+    }
+}
 
-const ControlPanel = connect(
-    // mapStateToProps,
+const ControlPanelContainer = connect(
+    mapStateToProps,
     mapDispatchToProps
 )(ControlPanel)
 
-export default ControlPanel;
+export default ControlPanelContainer;
 
