@@ -2,4 +2,4 @@
 
 ### Under Construction
 
-A simple web-based Blackjack game!
+A simple web-based Blackjack game written in *React*
