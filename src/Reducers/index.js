@@ -7,11 +7,21 @@ const cards = (state = [], action) => {
             return action.payload
         case ActionType.addDealerCard:
         case ActionType.addPlayerCard:
-            const index = state.indexOf(action.payload[0]);
+            var cards = state;
+            const index = action.payload.position;
             if (index > -1) {
-                state.splice(index, 1);
+                cards.splice(index, 1);
             }
-            return state
+            return cards
+        case ActionType.dealerDrawToSeventeen:
+            var cards = state;
+            const indexes = action.payload.position;
+            indexes.forEach((index) => {
+                if (index > -1) {
+                    cards.splice(index, 1);
+                }
+            });
+            return cards
         default:
             return state
     }
@@ -20,11 +30,13 @@ const cards = (state = [], action) => {
 const dealerCards = (state = [], action) => {
     switch (action.type) {
         case ActionType.addDealerCard:
-            return state.concat(action.payload)
+            return state.concat(action.payload.card)
         case ActionType.resetCards:
             return action.payload
         case ActionType.loadCards:
             return []
+        case ActionType.dealerDrawToSeventeen:
+            return action.payload.cards
         default:
             return state
     }
@@ -33,7 +45,7 @@ const dealerCards = (state = [], action) => {
 const playerCards = (state = [], action) => {
     switch (action.type) {
         case ActionType.addPlayerCard:
-            return state.concat(action.payload)
+            return state.concat(action.payload.card)
         case ActionType.resetCards:
             return action.payload
         case ActionType.loadCards:

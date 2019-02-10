@@ -21,15 +21,15 @@ class ControlPanel extends Component {
     }
 
     render() {
-        const { loadCards, startGame, playerHit } = this.props;
+        const { loadCardsClick, startGameClick, playerHitClick, playerStandClick } = this.props;
 
         return (
             <Grid item xs={12} className={css.dockBottom}>
                 <BottomNavigation showLabels>
-                    <BottomNavigationAction onClick={startGame} label="Start" icon={<PlayArrowIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={playerHit} label="Hit" icon={<CheckIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={loadCards} label="Stand" icon={<StopIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={loadCards} label="Reload" icon={<RestoreIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={startGameClick} label="Start" icon={<PlayArrowIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={playerHitClick} label="Hit" icon={<CheckIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={playerStandClick} label="Stand" icon={<StopIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={loadCardsClick} label="Reload" icon={<RestoreIcon style={{ fontSize: 30 }} />} />
                 </BottomNavigation>
             </Grid>
         );

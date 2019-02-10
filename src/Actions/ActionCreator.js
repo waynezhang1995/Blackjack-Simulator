@@ -1,6 +1,6 @@
 import { PrepareCards } from '../Util/Utils.js';
 import ActionType from './ActionTypes.js';
-import Store from '../Store/Store.js';
+import { GetCardsSum } from '../Util/Utils.js';
 
 const loadCards = () => {
     const decks = 6; //TODO: make this configurable
@@ -18,23 +18,50 @@ const resetCards = () => {
     }
 }
 
-const drawDealerCard = () => {
-    const cards = Store.getState().cards;
-    const dealerCard = cards[Math.floor(Math.random() * cards.length)];
+const drawDealerCard = (cards) => {
+    const index = Math.floor(Math.random() * cards.length);
+    const dealerCard = cards[index];
     return {
         type: ActionType.addDealerCard,
-        payload: [dealerCard]
+        payload: {
+            card: [dealerCard],
+            position: index
+        }
     }
 }
 
-const drawPlayerCard = () => {
-    const cards = Store.getState().cards;
-    const playCard = cards[Math.floor(Math.random() * cards.length)];
+const drawPlayerCard = (cards) => {
+    const index = Math.floor(Math.random() * cards.length);
+    const playCard = cards[index];
     return {
         type: ActionType.addPlayerCard,
-        payload: [playCard]
+        payload: {
+            card: [playCard],
+            position: index
+        }
     }
 }
 
-export { loadCards, resetCards, drawDealerCard, drawPlayerCard}
+const dealerDrawToSeventeen = (cards, dealerCards) => {
+    var total = 0;
+    var indexes = [];
+
+    while (total < 17) {
+        const index = Math.floor(Math.random() * cards.length);
+        const nextDealerCard = cards[index];
+        indexes.push(index);
+        dealerCards = dealerCards.concat([nextDealerCard]);
+        total = GetCardsSum(dealerCards);
+    }
+
+    return {
+        type: ActionType.dealerDrawToSeventeen,
+        payload: {
+            cards: dealerCards,
+            position: indexes
+        }
+    }
+}
+
+export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen }
 

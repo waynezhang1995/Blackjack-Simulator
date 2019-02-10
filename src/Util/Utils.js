@@ -42,7 +42,12 @@ const GetCardsSum = (cards) => {
         }
     });
 
-    return cards.reduce((a, b) => a + b, 0);
+    var sum = cards.reduce((a, b) => a + b, 0);
+    if (flipAce && sum > 21) {
+        sum -= 10;
+    }
+
+    return sum
 }
 
 export { PrepareCards, GetCardsSum };
