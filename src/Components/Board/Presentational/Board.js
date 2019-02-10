@@ -14,6 +14,11 @@ class Board extends Component {
         return dealerCards.map((card) => <Card key={card + Math.random()} number={card}></Card>)
     }
 
+    CreatePlayerCards() {
+        const { playerCards } = this.props;
+        return playerCards.map((card) => <Card key={card + Math.random()} number={card}></Card>)
+    }
+
     render() {
         return (
             <div className={css.boardWrapper}>
@@ -22,7 +27,7 @@ class Board extends Component {
 
                 </div>
                 <div className={css.playerPanel}>
-                    {this.CreateDealerCards()}
+                    {this.CreatePlayerCards()}
                 </div>
             </div>
         );

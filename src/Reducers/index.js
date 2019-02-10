@@ -6,6 +6,7 @@ const cards = (state = [], action) => {
         case ActionType.loadCards:
             return action.payload
         case ActionType.addDealerCard:
+        case ActionType.addPlayerCard:
             const index = state.indexOf(action.payload[0]);
             if (index > -1) {
                 state.splice(index, 1);
@@ -29,17 +30,23 @@ const dealerCards = (state = [], action) => {
     }
 }
 
+const playerCards = (state = [], action) => {
+    switch (action.type) {
+        case ActionType.addPlayerCard:
+            return state.concat(action.payload)
+        case ActionType.resetCards:
+            return action.payload
+        case ActionType.loadCards:
+            return []
+        default:
+            return state
+    }
+}
+
 const Reducers = combineReducers({
     cards,
-    dealerCards
+    dealerCards,
+    playerCards
 });
-
-// const Reducers = (state = {}, action) => {
-//     console.log(state);
-//     return {
-//       cards: cards(state, action),
-//       dealerCards: dealerCards(state, action)
-//     };
-//   };
 
 export default Reducers;

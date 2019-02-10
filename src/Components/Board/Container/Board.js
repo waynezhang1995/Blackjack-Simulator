@@ -5,7 +5,8 @@ const mapStateToProps = (state, ownProps) => {
     console.log(state);
     return {
         ...ownProps,
-        dealerCards: state.dealerCards
+        dealerCards: state.dealerCards,
+        playerCards: state.playerCards
     }
 
 }
