@@ -12,5 +12,6 @@
 }
 
 .player-panel {
+    justify-content: center;
     display: flex;
 }
