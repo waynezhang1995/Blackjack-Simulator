@@ -1,5 +1,5 @@
 ## Blackjack Simulator
 
-### Under Construction
+### 🚧 Under Construction 🚧
 
-A simple web-based Blackjack game written in *React*
+A simple web-based Blackjack game written in *React* 🎉
