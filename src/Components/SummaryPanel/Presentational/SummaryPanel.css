@@ -1,0 +1,9 @@
+.summary-panel-body {
+    margin: auto;
+    width: 300px;
+}
+
+.summary-section {
+    padding: 5px 5px 5px 30px;
+    text-align: left;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Card from "../../Card/Presentational/Card.js"
-import "./Board.css";
+import Card from '../../Card/Presentational/Card.js'
+import './Board.css';
 
 const css = {
     dealerPanel: 'dealer-panel',
@@ -9,6 +9,7 @@ const css = {
 }
 
 class Board extends Component {
+
     CreateDealerCards() {
         const { dealerCards } = this.props;
         return dealerCards.map((card) => <Card key={card + Math.random()} number={card}></Card>)

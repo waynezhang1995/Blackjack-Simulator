@@ -5,6 +5,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import CheckIcon from '@material-ui/icons/Check';
+import StopIcon from '@material-ui/icons/Stop';
 import "./ControlPanel.css"
 
 const css = {
@@ -27,6 +28,7 @@ class ControlPanel extends Component {
                 <BottomNavigation showLabels>
                     <BottomNavigationAction onClick={startGame} label="Start" icon={<PlayArrowIcon style={{ fontSize: 30 }} />} />
                     <BottomNavigationAction onClick={playerHit} label="Hit" icon={<CheckIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction onClick={loadCards} label="Stand" icon={<StopIcon style={{ fontSize: 30 }} />} />
                     <BottomNavigationAction onClick={loadCards} label="Reload" icon={<RestoreIcon style={{ fontSize: 30 }} />} />
                 </BottomNavigation>
             </Grid>

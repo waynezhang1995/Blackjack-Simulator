@@ -2,14 +2,9 @@
 const Shuffle = (array) => {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
-        // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-
-        // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
@@ -28,6 +23,26 @@ const PrepareCards = (decks) => {
     return Shuffle(cards)
 }
 
+const GetCardsSum = (cards) => {
+    var flipAce = false;
+    cards = cards.map((card) => {
+        switch (card) {
+            case 'A':
+                if (flipAce) {
+                    return 1;
+                }
+                flipAce = true;
+                return 11;
+            case 'J':
+            case 'Q':
+            case 'K':
+                return 10;
+            default:
+                return parseInt(card, 10);
+        }
+    });
 
+    return cards.reduce((a, b) => a + b, 0);
+}
 
-export { PrepareCards };
+export { PrepareCards, GetCardsSum };
