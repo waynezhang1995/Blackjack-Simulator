@@ -50,4 +50,24 @@ const GetCardsSum = (cards) => {
     return sum
 }
 
-export { PrepareCards, GetCardsSum };
+const GetRoundResult = (dealerSum, playerSum) => {
+    var result = '';
+
+    if (playerSum > 21 || (dealerSum === 21 && playerSum != 21)) {
+        result = 'Dealer Wins';
+    } else if (dealerSum > 21 || (playerSum === 21 && dealerSum != 21)) {
+        result = 'Player Wins';
+    } else {
+        if (playerSum < dealerSum) {
+            result = 'Dealer Wins';
+        } else if (playerSum > dealerSum) {
+            result = 'Player Wins';
+        } else {
+            result = 'Tie'
+        }
+    }
+
+    return result;
+}
+
+export { PrepareCards, GetCardsSum, GetRoundResult };

@@ -14,7 +14,7 @@ const cards = (state = [], action) => {
             }
             return cards
         case ActionType.dealerDrawToSeventeen:
-            var cards = state;
+            cards = state;
             const indexes = action.payload.position;
             indexes.forEach((index) => {
                 if (index > -1) {
@@ -55,10 +55,22 @@ const playerCards = (state = [], action) => {
     }
 }
 
+const roundResult = (state = { roundEnd: false, result: '' }, action) => {
+    switch (action.type) {
+        case ActionType.calculateRoundResult:
+            return Object.assign({}, action.payload)
+        case ActionType.resetRoundResult:
+            return Object.assign({}, action.payload)
+        default:
+            return state
+    }
+}
+
 const Reducers = combineReducers({
     cards,
     dealerCards,
-    playerCards
+    playerCards,
+    roundResult
 });
 
 export default Reducers;

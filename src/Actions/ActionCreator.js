@@ -1,6 +1,6 @@
 import { PrepareCards } from '../Util/Utils.js';
 import ActionType from './ActionTypes.js';
-import { GetCardsSum } from '../Util/Utils.js';
+import { GetCardsSum, GetRoundResult } from '../Util/Utils.js';
 
 const loadCards = () => {
     const decks = 6; //TODO: make this configurable
@@ -63,5 +63,24 @@ const dealerDrawToSeventeen = (cards, dealerCards) => {
     }
 }
 
-export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen }
+const calculateRoundResult = (dealerSum, playerSum, ) => {
+    return {
+        type: ActionType.calculateRoundResult,
+        payload: {
+            roundEnd: true,
+            result: GetRoundResult(dealerSum, playerSum)
+        }
+    }
+}
 
+const resetSummary = () => {
+    return {
+        type: ActionType.resetRoundResult,
+        payload: {
+            roundEnd: false,
+            result: ''
+        }
+    }
+}
+
+export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, calculateRoundResult, resetSummary }

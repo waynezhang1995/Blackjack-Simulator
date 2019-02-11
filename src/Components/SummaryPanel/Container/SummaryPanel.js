@@ -5,20 +5,19 @@ import SummaryPanel from '../Presentational/SummaryPanel.js';
 const mapStateToProps = (state, ownProps) => {
     const playerSum = GetCardsSum(state.playerCards);
     const dealerSum = GetCardsSum(state.dealerCards);
-
+    const roundResult = state.roundResult;
     return {
         ...ownProps,
         display: state.dealerCards.length === 0 ? 'none' : 'block',
         playerTotal: playerSum,
         dealerTotal: dealerSum,
-        roundWinner: 'TBD' // TODO. Calculate winner if roundEnd flag is true
+        roundResult: roundResult
     }
 }
 
 
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    // loadCards: () => dispatch(loadCards())
 })
 
 const SummaryPanelBody = connect(

@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
 import ControlPanel from '../Presentational/ControlPanel.js';
-import { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen } from '../../../Actions/ActionCreator.js';
+import { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, resetSummary } from '../../../Actions/ActionCreator.js';
 
 const mapStateToProps = (state, ownProps) => ({
+    ...ownProps,
     cards: state.cards,
-    dealerCards: state.dealerCards
+    dealerCards: state.dealerCards,
+    playerCards: state.playerCards,
+    roundEnd: state.roundResult.roundEnd
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -19,9 +22,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             // Player draws 2 cards
             dispatch(drawPlayerCard(cards))
             dispatch(drawPlayerCard(cards))
+
+            // Reset summary
+            dispatch(resetSummary())
         },
         playerHit: (cards) => dispatch(drawPlayerCard(cards)),
-        playerStand: (cards, dealerCards) => dispatch(dealerDrawToSeventeen(cards, dealerCards))
+        playerStand: (cards, dealerCards) => {
+            dispatch(dealerDrawToSeventeen(cards, dealerCards));
+        }
     }
 }
 

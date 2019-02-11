@@ -8,9 +8,9 @@ const css = {
 };
 
 class SummaryPanel extends Component {
-
     render() {
-        const { display, playerTotal, dealerTotal, roundWinner } = this.props;
+        const { display, playerTotal, dealerTotal, roundResult } = this.props;
+        const { roundEnd, result } = roundResult;
 
         return (
             <div>
@@ -18,7 +18,7 @@ class SummaryPanel extends Component {
                     <div className={css.summarySection}>
                         <p>Dealer has: {dealerTotal}</p>
                         <p>Player has: {playerTotal}</p>
-                        <p>Winner: <b>{roundWinner}</b> 🎉</p>
+                        <p>Winner: <b>{roundEnd ? result + '🎉' : ''}</b></p>
                     </div>
                 </Paper>
             </div>

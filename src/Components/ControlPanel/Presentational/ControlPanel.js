@@ -11,7 +11,13 @@ import "./ControlPanel.css"
 const css = {
     dockBottom: 'dock-bottom',
     controlPanel: 'control-panel',
-    buttonColor: 'button-color'
+    buttonColor: 'button-color',
+    labelFont: 'label-font',
+    buttonPlay: 'button-play',
+    buttonHit: 'button-hit',
+    buttonStand: 'button-stand',
+    buttonReload: 'button-reload',
+    buttonDisabled: 'button-disabled'
 };
 
 class ControlPanel extends Component {
@@ -21,15 +27,15 @@ class ControlPanel extends Component {
     }
 
     render() {
-        const { loadCardsClick, startGameClick, playerHitClick, playerStandClick } = this.props;
+        const { loadCardsClick, startGameClick, playerHitClick, playerStandClick, roundEnd } = this.props;
 
         return (
-            <Grid item xs={12} className={css.dockBottom}>
+            <Grid item xs={12} className={css.dockBottom + ' ' + css.controlPanel}>
                 <BottomNavigation showLabels>
-                    <BottomNavigationAction onClick={startGameClick} label="Start" icon={<PlayArrowIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={playerHitClick} label="Hit" icon={<CheckIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={playerStandClick} label="Stand" icon={<StopIcon style={{ fontSize: 30 }} />} />
-                    <BottomNavigationAction onClick={loadCardsClick} label="Reload" icon={<RestoreIcon style={{ fontSize: 30 }} />} />
+                    <BottomNavigationAction className={roundEnd ? '' : css.buttonDisabled} onClick={startGameClick} label="Start" classes={{ label: css.labelFont }} icon={<PlayArrowIcon className={css.buttonPlay} />} />
+                    <BottomNavigationAction className={roundEnd ? css.buttonDisabled : ''} onClick={playerHitClick} label="Hit" classes={{ label: css.labelFont }} icon={<CheckIcon className={css.buttonHit} />} />
+                    <BottomNavigationAction className={roundEnd ? css.buttonDisabled : ''} onClick={playerStandClick} label="Stand" classes={{ label: css.labelFont }} icon={<StopIcon className={css.buttonStand} />} />
+                    <BottomNavigationAction onClick={loadCardsClick} label="Reload" classes={{ label: css.labelFont }} icon={<RestoreIcon className={css.buttonReload} />} />
                 </BottomNavigation>
             </Grid>
         );

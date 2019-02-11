@@ -1,13 +1,54 @@
 .dock-bottom {
     position: absolute;
-    bottom: 20%;
+    bottom: 14%;
     width: 100%;
 }
 
-.control-panel {
-    min-height: 300px;
+.control-panel .label-font {
+    font-size: 16px;
+    color: black;
 }
 
-.button-color {
+.control-panel .button-play {
+    font-size: 40px;
+    color: green;
+}
+
+.control-panel .button-hit {
+    font-size: 40px;
+    color: blue;
+}
+
+.control-panel .button-stand {
+    font-size: 40px;
     color: red;
 }
+
+.control-panel .button-reload {
+    font-size: 40px;
+    color: black;
+}
+
+.control-panel .button-disabled {
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.control-panel .button-disabled .button-hit {
+    color: grey;
+}
+
+.control-panel .button-disabled .button-stand {
+    color: grey;
+}
+
+.control-panel .button-disabled .button-play {
+    color: grey;
+}
+
+.control-panel .button-disabled .label-font {
+    color: grey;
+}
+
+
+
