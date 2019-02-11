@@ -5,21 +5,44 @@ import { Provider } from 'react-redux';
 import Appbar from './Components/Appbar/Appbar.js';
 import ControlPanelContainer from './Components/ControlPanel/Container/ControlPanel.js';
 import SummaryPanelBody from './Components/SummaryPanel/Container/SummaryPanel.js'
+import WelcomeDialog from './Components/WelcomeDialog/WelcomeDialog.js';
+import StatisticPanelContainer from './Components/StatisticPanel/Container/StatisticPanel.js';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <Provider store={Store}>
-        <div className='App'>
-          <Appbar></Appbar>
-          <BoardBody></BoardBody>
-          <SummaryPanelBody></SummaryPanelBody>
-          <ControlPanelContainer></ControlPanelContainer>
-        </div>
-      </Provider>
-    );
-  }
+
+    constructor(props) {
+        super(props);
+        this.state = { init: true };
+    }
+
+    startGame = () => {
+        this.setState((state, props) => {
+            return { init: false };
+        });
+    }
+
+    render() {
+        const { init } = this.state;
+
+        const blackJackSimulator = (
+            <div>
+                <BoardBody></BoardBody>
+                <SummaryPanelBody></SummaryPanelBody>
+                <ControlPanelContainer></ControlPanelContainer>
+                <StatisticPanelContainer></StatisticPanelContainer>
+            </div>
+        );
+
+        return (
+            <Provider store={Store}>
+                <div className='App'>
+                    <Appbar></Appbar>
+                    {init ? <WelcomeDialog onStartGameClick={this.startGame} open={init} /> : blackJackSimulator}
+                </div>
+            </Provider>
+        );
+    }
 }
 
 export default App;

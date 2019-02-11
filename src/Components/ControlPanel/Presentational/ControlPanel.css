@@ -1,11 +1,16 @@
-.dock-bottom {
-    position: absolute;
-    bottom: 14%;
-    width: 100%;
+.control-panel .control-panel-body {
+    height: 75px;
+    margin: auto;
+    width: 500px;
+    margin-top: 90px;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 .control-panel .label-font {
     font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     color: black;
 }
 
@@ -48,6 +53,8 @@
 
 .control-panel .button-disabled .label-font {
     color: grey;
+    font-weight: 500;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 

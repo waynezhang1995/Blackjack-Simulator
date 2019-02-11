@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ControlPanel from '../Presentational/ControlPanel.js';
-import { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, resetSummary } from '../../../Actions/ActionCreator.js';
+import { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, resetSummary, resetStatistic } from '../../../Actions/ActionCreator.js';
 
 const mapStateToProps = (state, ownProps) => ({
     ...ownProps,
@@ -12,7 +12,10 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        loadCards: () => dispatch(loadCards()),
+        loadCards: (cards) => {
+            dispatch(loadCards());
+            dispatch(resetStatistic(cards));
+        },
         startGame: (cards) => {
             dispatch(resetCards());
 
@@ -43,7 +46,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     }
 
     const loadCardsClick = () => {
-        dispatchProps.loadCards();
+        dispatchProps.loadCards(stateProps.cards);
     }
 
     const playerStandClick = () => {

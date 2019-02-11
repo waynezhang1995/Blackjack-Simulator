@@ -5,7 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import "./Appbar.css"
 
 const css = {
-    headerCls: 'App-header'
+    headerCls: 'app-header',
+    headerFont: 'header-font'
 };
 
 class Appbar extends Component {
@@ -14,8 +15,8 @@ class Appbar extends Component {
         return (
             <AppBar className={css.headerCls} position="static">
                 <Toolbar>
-                    <Typography variant="title" color="inherit">
-                        Blackjack Simulator
+                    <Typography variant="title" className={css.headerFont} color="inherit">
+                        <span role="img" aria-label="poker">♠️</span> Blackjack Simulator <span role="img" aria-label="poker">♥️</span>
                     </Typography>
                 </Toolbar>
             </AppBar>

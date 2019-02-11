@@ -1,4 +1,4 @@
-.App-header {
+.app-header {
   background-color: #282c34;
   min-height: 60px;
   display: flex;
@@ -7,4 +7,8 @@
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.app-header .header-font {
+  font-size: 30px;
 }

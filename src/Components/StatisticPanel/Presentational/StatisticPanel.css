@@ -1,0 +1,13 @@
+.App .statistic-panel-body {
+    position: absolute;
+    top: 107px;
+    right: 100px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid;
+    border-radius: 11px;
+}
+
+.statistic-panel-title {
+    padding-top: 16px;
+}

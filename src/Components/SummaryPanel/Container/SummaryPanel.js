@@ -20,10 +20,10 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
-const SummaryPanelBody = connect(
+const SummaryPanelContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(SummaryPanel)
 
-export default SummaryPanelBody;
+export default SummaryPanelContainer;
 

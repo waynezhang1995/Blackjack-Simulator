@@ -12,12 +12,13 @@ const css = {
 class Board extends Component {
 
     componentDidUpdate() {
-        const { dealerCards, playerCards, onCalculateRoundResult } = this.props;
+        const { dealerCards, playerCards, onCalculateRoundResult, onUpdateStatistic, cards } = this.props;
         const playerSum = GetCardsSum(playerCards);
         const dealerSum = GetCardsSum(dealerCards);
 
         if (dealerCards.length !== 1 || playerSum > 21 || (playerSum === 21 && playerCards.length === 2)) {
             onCalculateRoundResult(dealerSum, playerSum);
+            onUpdateStatistic(dealerSum, playerSum, cards)
         }
     }
 

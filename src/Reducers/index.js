@@ -66,11 +66,34 @@ const roundResult = (state = { roundEnd: false, result: '' }, action) => {
     }
 }
 
+const statistic = (state = { dealerWinCount: 0, playerWinCount: 0, tieCount: 0, remainingCards: 0 }, action) => {
+    switch (action.type) {
+        case ActionType.updateStatistic:
+            var { roundResult, remainingCards } = action.payload;
+            return {
+                dealerWinCount: roundResult === 'Dealer Wins' ? ++state.dealerWinCount : state.dealerWinCount,
+                playerWinCount: roundResult === 'Player Wins' ? ++state.playerWinCount : state.playerWinCount,
+                tieCount: roundResult === 'Tie' ? ++state.tieCount : state.tieCount,
+                remainingCards: remainingCards
+            };
+        case ActionType.resetStatistic:
+            return {
+                dealerWinCount: 0,
+                playerWinCount: 0,
+                tieCount: 0,
+                remainingCards: action.payload.remainingCards
+            }
+        default:
+            return state
+    }
+}
+
 const Reducers = combineReducers({
     cards,
     dealerCards,
     playerCards,
-    roundResult
+    roundResult,
+    statistic
 });
 
 export default Reducers;

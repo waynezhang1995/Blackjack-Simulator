@@ -63,12 +63,31 @@ const dealerDrawToSeventeen = (cards, dealerCards) => {
     }
 }
 
-const calculateRoundResult = (dealerSum, playerSum, ) => {
+const calculateRoundResult = (dealerSum, playerSum ) => {
     return {
         type: ActionType.calculateRoundResult,
         payload: {
             roundEnd: true,
-            result: GetRoundResult(dealerSum, playerSum)
+            result: dealerSum === 0 ? '' : GetRoundResult(dealerSum, playerSum)
+        }
+    }
+}
+
+const updateStatistic = (dealerSum, playerSum, cards) => {
+    return {
+        type: ActionType.updateStatistic,
+        payload: {
+            roundResult: dealerSum === 0 ? '' : GetRoundResult(dealerSum, playerSum),
+            remainingCards: cards.length
+        }
+    }
+}
+
+const resetStatistic = (cards) => {
+    return {
+        type: ActionType.resetStatistic,
+        payload: {
+            remainingCards: cards.length
         }
     }
 }
@@ -83,4 +102,4 @@ const resetSummary = () => {
     }
 }
 
-export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, calculateRoundResult, resetSummary }
+export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, calculateRoundResult, resetSummary, updateStatistic, resetStatistic }

@@ -53,9 +53,9 @@ const GetCardsSum = (cards) => {
 const GetRoundResult = (dealerSum, playerSum) => {
     var result = '';
 
-    if (playerSum > 21 || (dealerSum === 21 && playerSum != 21)) {
+    if (playerSum > 21 || (dealerSum === 21 && playerSum !== 21)) {
         result = 'Dealer Wins';
-    } else if (dealerSum > 21 || (playerSum === 21 && dealerSum != 21)) {
+    } else if (dealerSum > 21 || (playerSum === 21 && dealerSum !== 21)) {
         result = 'Player Wins';
     } else {
         if (playerSum < dealerSum) {
