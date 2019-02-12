@@ -63,12 +63,22 @@ const dealerDrawToSeventeen = (cards, dealerCards) => {
     }
 }
 
-const calculateRoundResult = (dealerSum, playerSum ) => {
+const calculateRoundResult = (dealerSum, playerSum) => {
     return {
         type: ActionType.calculateRoundResult,
         payload: {
             roundEnd: true,
             result: dealerSum === 0 ? '' : GetRoundResult(dealerSum, playerSum)
+        }
+    }
+}
+
+const resetRoundEnd = () => {
+    return {
+        type: ActionType.resetRoundEnd,
+        payload: {
+            roundEnd: false,
+            result: ''
         }
     }
 }
@@ -102,4 +112,15 @@ const resetSummary = () => {
     }
 }
 
-export { loadCards, resetCards, drawDealerCard, drawPlayerCard, dealerDrawToSeventeen, calculateRoundResult, resetSummary, updateStatistic, resetStatistic }
+export {
+    loadCards,
+    resetCards,
+    drawDealerCard,
+    drawPlayerCard,
+    dealerDrawToSeventeen,
+    calculateRoundResult,
+    resetSummary,
+    updateStatistic,
+    resetStatistic,
+    resetRoundEnd
+}

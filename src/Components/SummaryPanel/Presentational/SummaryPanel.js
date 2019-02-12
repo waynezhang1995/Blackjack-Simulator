@@ -18,7 +18,7 @@ class SummaryPanel extends Component {
                     <div className={css.summarySection}>
                         <p>Dealer has: {dealerTotal}</p>
                         <p>Player has: {playerTotal}</p>
-                        <p>Winner: <b>{roundEnd ? result + '🎉' : ''}</b></p>
+                        <p>Winner: <b>{roundEnd ? result : ''}</b></p>
                     </div>
                 </Paper>
             </div>

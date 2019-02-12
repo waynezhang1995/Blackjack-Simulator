@@ -9,6 +9,17 @@
   color: white;
 }
 
+.app-header button {
+  position: absolute;
+  right: 30px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+.app-header button svg {
+  padding-left: 5px;
+}
+
 .app-header .header-font {
   font-size: 30px;
 }

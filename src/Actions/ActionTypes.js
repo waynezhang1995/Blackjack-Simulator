@@ -7,7 +7,8 @@ const ActionType = {
     calculateRoundResult: 'CALCULATE_ROUND_RESULT',
     resetRoundResult: 'RESET_ROUND_RESULT',
     updateStatistic: 'CALCULATE_STATISTIC',
-    resetStatistic: 'RESET_STATISTIC'
+    resetStatistic: 'RESET_STATISTIC',
+    resetRoundEnd: 'RESET_ROUND_END'
 }
 
 export default ActionType;

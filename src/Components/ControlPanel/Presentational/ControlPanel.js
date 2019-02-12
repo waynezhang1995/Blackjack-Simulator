@@ -28,12 +28,12 @@ class ControlPanel extends Component {
     }
 
     render() {
-        const { loadCardsClick, startGameClick, playerHitClick, playerStandClick, roundEnd } = this.props;
-
+        const { loadCardsClick, startGameClick, playerHitClick, playerStandClick, roundResult } = this.props;
+        const roundEnd = roundResult.roundEnd;
         return (
             <Grid item xs={12} className={css.controlPanel}>
                 <BottomNavigation className={css.controlPanelBody} showLabels>
-                    <BottomNavigationAction className={roundEnd ? '' : css.buttonDisabled} onClick={startGameClick} label="Start" classes={{ label: css.labelFont }} icon={<PlayArrowIcon className={css.buttonPlay} />} />
+                    <BottomNavigationAction className={roundEnd ? '' : css.buttonDisabled} onClick={startGameClick} label="Next Game" classes={{ label: css.labelFont }} icon={<PlayArrowIcon className={css.buttonPlay} />} />
                     <BottomNavigationAction className={roundEnd ? css.buttonDisabled : ''} onClick={playerHitClick} label="Hit" classes={{ label: css.labelFont }} icon={<CheckIcon className={css.buttonHit} />} />
                     <BottomNavigationAction className={roundEnd ? css.buttonDisabled : ''} onClick={playerStandClick} label="Stand" classes={{ label: css.labelFont }} icon={<StopIcon className={css.buttonStand} />} />
                     <BottomNavigationAction onClick={loadCardsClick} label="Reload" classes={{ label: css.labelFont }} icon={<RestoreIcon className={css.buttonReload} />} />

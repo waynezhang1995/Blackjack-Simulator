@@ -11,8 +11,15 @@ const css = {
 
 class Board extends Component {
 
+    // TODO: startGame should be called in componentDidMount
+    //       Need to figure out how to delay this call once cards finish loading
     componentDidUpdate() {
-        const { dealerCards, playerCards, onCalculateRoundResult, onUpdateStatistic, cards } = this.props;
+        const { dealerCards, playerCards, onCalculateRoundResult, onUpdateStatistic, cards, startGame } = this.props;
+
+        if (dealerCards.length === 0 && playerCards.length === 0) {
+            return startGame(cards);
+        }
+
         const playerSum = GetCardsSum(playerCards);
         const dealerSum = GetCardsSum(dealerCards);
 

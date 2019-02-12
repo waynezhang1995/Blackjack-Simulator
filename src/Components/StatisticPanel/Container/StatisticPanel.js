@@ -3,10 +3,7 @@ import StatisticPanel from '../Presentational/StatisticPanel.js';
 
 const mapStateToProps = (state, ownProps) => ({
     ...ownProps,
-    dealerWinCount: state.statistic.dealerWinCount,
-    playerWinCount: state.statistic.playerWinCount,
-    tieCount: state.statistic.tieCount,
-    remainingCards: state.statistic.remainingCards
+    ...state.statistic
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
