@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import CodeIcon from '@material-ui/icons/Code';
 import Button from '@material-ui/core/Button';
 import "./Appbar.css"
 
@@ -21,14 +21,14 @@ class Appbar extends Component {
 
     render() {
         return (
-            <AppBar className={css.headerCls} position="static">
+            <AppBar className={css.headerCls} position="static" color="primary" elevation={3}>
                 <Toolbar>
                     <Typography variant="title" className={css.headerFont} color="inherit">
                         <span role="img" aria-label="poker">♠️</span> Blackjack Simulator <span role="img" aria-label="poker">♥️</span>
                     </Typography>
                     <Button onClick={this.openGithubPage} variant="contained" color="primary" className={css.viewSouceCode}>
                         View Source Code
-                    <FavoriteIcon />
+                        <CodeIcon />
                     </Button>
                 </Toolbar>
             </AppBar>

@@ -8,6 +8,8 @@
   top: 0px;
   left: 0px;
   z-index: 1000;
+  font-weight: 500 !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
 
 .init-screen {

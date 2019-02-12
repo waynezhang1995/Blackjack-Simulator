@@ -14,7 +14,7 @@ class SummaryPanel extends Component {
 
         return (
             <div>
-                <Paper style={{ display: display }} className={css.SummaryPanelBody} elevation={1}>
+                <Paper style={{ display: display }} className={css.SummaryPanelBody} elevation={3}>
                     <div className={css.summarySection}>
                         <p>Dealer has: {dealerTotal}</p>
                         <p>Player has: {playerTotal}</p>

@@ -13,7 +13,7 @@ class StatisticPanel extends Component {
         const { dealerWinCount, playerWinCount, tieCount, remainingCards } = this.props;
         return (
             <div>
-                <Paper className={css.statisticPanelBody} elevation={1}>
+                <Paper className={css.statisticPanelBody} elevation={3}>
                     <div>
                         <Typography className={css.statisticPanelTitle} variant="title" color="inherit">
                             Game Statistic:
