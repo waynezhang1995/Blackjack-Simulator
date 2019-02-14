@@ -1,0 +1,39 @@
+.sub-header {
+    padding-bottom: 5px;
+}
+
+.how-to-play-section {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 21px;
+}
+
+.content .how-to-play-section{
+    font-size: 21px;
+}
+
+.how-to-play-section a {
+    display: inline;
+    font-size: 21px;
+}
+
+.title h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.content .sub-header  {
+    font-size: 21px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.dialog .start-button {
+    justify-content: center;
+}
+
+.dialog .start-button button {
+    font-size: 20px;
+}

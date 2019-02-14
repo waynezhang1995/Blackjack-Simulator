@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Board from '../Presentational/Board.js';
-import { calculateRoundResult, updateStatistic, drawDealerCard, drawPlayerCard } from '../../../Actions/ActionCreator.js';
+import { calculateRoundResult, updateStatistic, drawDealerCard, drawPlayerCard, loadCards, resetStatistic, resetRoundEnd } from '../../../Actions/ActionCreator.js';
 
 const mapStateToProps = (state, ownProps) => {
     console.log(state);
@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
         ...ownProps,
         dealerCards: state.dealerCards,
         playerCards: state.playerCards,
-        cards: state.cards
+        cards: state.cards,
+        shoeEnd: state.cards.length === 0 ? true : false
     }
 }
 
@@ -22,6 +23,11 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
         // Player draws 2 cards
         dispatch(drawPlayerCard(cards))
         dispatch(drawPlayerCard(cards))
+    },
+    ReloadCards: (cards) => {
+        dispatch(loadCards());
+        dispatch(resetStatistic(cards));
+        dispatch(resetRoundEnd())
     }
 })
 

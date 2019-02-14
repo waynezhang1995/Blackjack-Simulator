@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../../Card/Presentational/Card.js';
 import { GetCardsSum } from '../../../Util/Utils.js';
+import GameEndDialog from '../../GameEndDialog/GameEndDialog.js';
 import './Board.css';
 
 const css = {
@@ -39,12 +40,20 @@ class Board extends Component {
         return playerCards.map((card) => <Card key={card + Math.random()} number={card}></Card>)
     }
 
+    ReloadShoe() {
+        const { ReloadCards, cards} = this.props;
+        ReloadCards(cards);
+    }
+
     render() {
+        const {shoeEnd} = this.props;
+        if (shoeEnd) {
+            return <GameEndDialog open={true} onReloadCardsClick={this.ReloadShoe.bind(this)}></GameEndDialog>;
+        }
         return (
             <div className={css.boardWrapper}>
                 <div className={css.dealerPanel}>
                     {this.CreateDealerCards()}
-
                 </div>
                 <div className={css.playerPanel}>
                     {this.CreatePlayerCards()}

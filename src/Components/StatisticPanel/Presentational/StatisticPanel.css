@@ -8,6 +8,11 @@
     border-radius: 11px;
 }
 
+.content .end-shoe-statistic-panel-body {
+    text-align: center;
+    box-shadow: unset;
+}
+
 .statistic-panel-title {
     padding-top: 16px;
 }

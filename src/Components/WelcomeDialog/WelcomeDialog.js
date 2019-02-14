@@ -22,7 +22,7 @@ const css = {
 class WelcomeDialog extends Component {
 
     render() {
-        const {open, onStartGameClick} = this.props;
+        const { open, onStartGameClick } = this.props;
 
         return (
             <div>
@@ -31,7 +31,7 @@ class WelcomeDialog extends Component {
                     aria-labelledby="customized-dialog-title"
                     open={open}
                     className={css.dialog}
-                    >
+                >
                     <DialogTitle className={css.title}>
                         Welcome to the Blackjack Simulator ♠️
                     </DialogTitle>
@@ -56,8 +56,8 @@ class WelcomeDialog extends Component {
                         </Typography>
                     </DialogContent>
                     <DialogActions className={css.startButton}>
-                    <Fab variant="extended" onClick={onStartGameClick} color="primary" aria-label="Add">
-                    Start Blackjack! 🃏
+                        <Fab variant="extended" onClick={onStartGameClick} color="primary" aria-label="Add">
+                            Start Blackjack! 🃏
                     </Fab>
 
                     </DialogActions>
