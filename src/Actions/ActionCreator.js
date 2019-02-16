@@ -51,7 +51,7 @@ const dealerDrawToSeventeen = (cards, dealerCards) => {
         const nextDealerCard = cards[index];
         indexes.push(index);
         dealerCards = dealerCards.concat([nextDealerCard]);
-        total = GetCardsSum(dealerCards);
+        total = GetCardsSum(dealerCards).sum;
     }
 
     return {

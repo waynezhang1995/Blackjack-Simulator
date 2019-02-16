@@ -9,6 +9,11 @@ import WelcomeDialog from './Components/WelcomeDialog/WelcomeDialog.js';
 import StatisticPanelContainer from './Components/StatisticPanel/Container/StatisticPanel.js';
 import './App.css';
 
+const css = {
+    centerPanel: 'center-panel',
+    centerPanelContent: 'center-panel-content'
+}
+
 class App extends Component {
 
     constructor(props) {
@@ -26,10 +31,12 @@ class App extends Component {
         const { init } = this.state;
 
         const blackJackSimulator = (
-            <div>
-                <BoardBody></BoardBody>
-                <SummaryPanelBody></SummaryPanelBody>
-                <ControlPanelContainer></ControlPanelContainer>
+            <div className={css.centerPanel}>
+                <div className={css.centerPanelContent}>
+                    <BoardBody></BoardBody>
+                    <SummaryPanelBody></SummaryPanelBody>
+                    <ControlPanelContainer></ControlPanelContainer>
+                </div>
                 <StatisticPanelContainer></StatisticPanelContainer>
             </div>
         );

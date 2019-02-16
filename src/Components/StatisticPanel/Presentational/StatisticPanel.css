@@ -1,8 +1,8 @@
 .App .statistic-panel-body {
     position: absolute;
-    top: 107px;
-    right: 100px;
-    width: 250px;
+    top: 12%;
+    right: 5%;
+    width: 200px;
     height: 250px;
     border: 1px solid;
     border-radius: 11px;

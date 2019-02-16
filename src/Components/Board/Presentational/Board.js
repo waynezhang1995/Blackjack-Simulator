@@ -21,8 +21,8 @@ class Board extends Component {
             return startGame(cards);
         }
 
-        const playerSum = GetCardsSum(playerCards);
-        const dealerSum = GetCardsSum(dealerCards);
+        const playerSum = GetCardsSum(playerCards).sum;
+        const dealerSum = GetCardsSum(dealerCards).sum;
 
         if (dealerCards.length !== 1 || playerSum > 21 || (playerSum === 21 && playerCards.length === 2)) {
             onCalculateRoundResult(dealerSum, playerSum);

@@ -45,9 +45,16 @@ const GetCardsSum = (cards) => {
     var sum = cards.reduce((a, b) => a + b, 0);
     if (flipAce && sum > 21) {
         sum -= 10;
+        return {
+            sum: sum,
+            containAce: false
+        }
     }
 
-    return sum
+    return {
+        sum: sum,
+        containAce: flipAce
+    }
 }
 
 const GetRoundResult = (dealerSum, playerSum) => {
