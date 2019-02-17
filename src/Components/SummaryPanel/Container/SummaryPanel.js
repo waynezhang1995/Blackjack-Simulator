@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
     const playerSum = GetCardsSum(state.playerCards);
     const dealerSum = GetCardsSum(state.dealerCards).sum;
     const roundResult = state.roundResult;
-    const playSumResult = playerSum.containAce ? playerSum.sum - 11 + '/' + playerSum.sum : playerSum.sum;
+    const playSumResult = playerSum.containAce ? playerSum.sum - 10 + '/' + playerSum.sum : playerSum.sum;
 
     return {
         ...ownProps,

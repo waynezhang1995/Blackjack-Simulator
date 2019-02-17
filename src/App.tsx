@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
-import BoardBody from './Components/Board/Container/Board.js';
-import Store from './Store/Store.js';
+import BoardBody from './Components/Board/Container/Board';
+import Store from './Store/Store';
 import { Provider } from 'react-redux';
-import Appbar from './Components/Appbar/Appbar.js';
-import ControlPanelContainer from './Components/ControlPanel/Container/ControlPanel.js';
-import SummaryPanelBody from './Components/SummaryPanel/Container/SummaryPanel.js'
-import WelcomeDialog from './Components/WelcomeDialog/WelcomeDialog.js';
-import StatisticPanelContainer from './Components/StatisticPanel/Container/StatisticPanel.js';
+import Appbar from './Components/Appbar/Appbar';
+import ControlPanelContainer from './Components/ControlPanel/Container/ControlPanel';
+import SummaryPanelBody from './Components/SummaryPanel/Container/SummaryPanel';
+import WelcomeDialog from './Components/WelcomeDialog/WelcomeDialog';
+import StatisticPanelContainer from './Components/StatisticPanel/Container/StatisticPanel';
 import './App.css';
+
+interface AppState {
+    init: boolean;
+}
 
 const css = {
     centerPanel: 'center-panel',
     centerPanelContent: 'center-panel-content'
-}
+};
 
-class App extends Component {
+class App extends Component<{}, AppState> {
+    state: AppState;
 
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         this.state = { init: true };
     }
 
-    startGame = () => {
-        this.setState((state, props) => {
+    startGame = (): void => {
+        this.setState((): AppState => {
             return { init: false };
         });
     }
