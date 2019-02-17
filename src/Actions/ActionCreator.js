@@ -1,5 +1,5 @@
 import { PrepareCards } from '../Util/Utils.js';
-import ActionType from './ActionTypes.js';
+import ActionType from './ActionTypes';
 import { GetCardsSum, GetRoundResult } from '../Util/Utils.js';
 
 const loadCards = () => {

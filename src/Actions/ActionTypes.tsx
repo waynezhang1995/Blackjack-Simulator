@@ -1,4 +1,4 @@
-const ActionType = {
+export default {
     loadCards: 'LOAD_CARDS',
     addDealerCard: 'ADD_DEALER_CARD',
     resetCards: 'REST_CARDS',
@@ -9,6 +9,4 @@ const ActionType = {
     updateStatistic: 'CALCULATE_STATISTIC',
     resetStatistic: 'RESET_STATISTIC',
     resetRoundEnd: 'RESET_ROUND_END'
-}
-
-export default ActionType;
+};
