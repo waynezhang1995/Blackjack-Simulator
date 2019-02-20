@@ -17,6 +17,7 @@
   right: 30px;
   border: 1px solid;
   border-radius: 15px;
+  z-index: 9999;
 }
 
 .app-header button svg {
