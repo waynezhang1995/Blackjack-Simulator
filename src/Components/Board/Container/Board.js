@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Board from '../Presentational/Board.js';
-import { calculateRoundResult, updateStatistic, drawDealerCard, drawPlayerCard, loadCards, resetStatistic, resetRoundEnd } from '../../../Actions/ActionCreator.js';
+import { calculateRoundResult, updateStatistic, drawDealerCard, drawPlayerCard, loadCards, resetStatistic, resetRoundEnd } from '../../../Actions/ActionCreator';
 
 const mapStateToProps = (state, ownProps) => {
     console.log(state);
