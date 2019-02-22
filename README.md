@@ -1,4 +1,4 @@
-## Blackjack Simulator
+## Blackjack Simulator ♠️
 
 ### 🚧 Under Construction 🚧
 
