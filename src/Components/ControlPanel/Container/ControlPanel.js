@@ -9,7 +9,7 @@ import {
     resetSummary,
     resetStatistic,
     resetRoundEnd
-} from '../../../Actions/ActionCreator.js';
+} from '../../../Actions/ActionCreator';
 
 const mapStateToProps = (state, ownProps) => ({
     ...ownProps,

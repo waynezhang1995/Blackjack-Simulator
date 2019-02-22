@@ -1,36 +1,37 @@
-import { PrepareCards } from '../Util/Utils.js';
-import ActionType from './ActionTypes';
-import { GetCardsSum, GetRoundResult } from '../Util/Utils.js';
+import { Action, actionType as ActionType } from './ActionTypes';
+import { GetCardsSum, GetRoundResult, PrepareCards } from '../Util/Utils';
 
-const loadCards = () => {
-    const decks = 6; //TODO: make this configurable
+
+const loadCards = (): Action => {
+    const decks = 6; // TODO: make this configurable
 
     return {
         type: ActionType.loadCards,
         payload: PrepareCards(decks)
-    }
-}
+    };
+};
 
-const resetCards = () => {
+const resetCards = (): Action => {
     return {
         type: ActionType.resetCards,
         payload: []
-    }
-}
+    };
+};
 
-const drawDealerCard = (cards) => {
+const drawDealerCard = (cards: number[]): Action => {
     const index = Math.floor(Math.random() * cards.length);
     const dealerCard = cards[index];
+
     return {
         type: ActionType.addDealerCard,
         payload: {
             card: [dealerCard],
             position: index
         }
-    }
-}
+    };
+};
 
-const drawPlayerCard = (cards) => {
+const drawPlayerCard = (cards: number[]): Action => {
     const index = Math.floor(Math.random() * cards.length);
     const playCard = cards[index];
     return {
@@ -39,12 +40,12 @@ const drawPlayerCard = (cards) => {
             card: [playCard],
             position: index
         }
-    }
-}
+    };
+};
 
-const dealerDrawToSeventeen = (cards, dealerCards) => {
-    var total = 0;
-    var indexes = [];
+const dealerDrawToSeventeen = (cards: number[], dealerCards: number[]): Action => {
+    const indexes = [];
+    let total = 0;
 
     while (total < 17) {
         const index = Math.floor(Math.random() * cards.length);
@@ -60,57 +61,57 @@ const dealerDrawToSeventeen = (cards, dealerCards) => {
             cards: dealerCards,
             position: indexes
         }
-    }
-}
+    };
+};
 
-const calculateRoundResult = (dealerSum, playerSum) => {
+const calculateRoundResult = (dealerSum: number, playerSum: number): Action => {
     return {
         type: ActionType.calculateRoundResult,
         payload: {
             roundEnd: true,
             result: dealerSum === 0 ? '' : GetRoundResult(dealerSum, playerSum)
         }
-    }
-}
+    };
+};
 
-const resetRoundEnd = () => {
+const resetRoundEnd = (): Action => {
     return {
         type: ActionType.resetRoundEnd,
         payload: {
             roundEnd: false,
             result: ''
         }
-    }
-}
+    };
+};
 
-const updateStatistic = (dealerSum, playerSum, cards) => {
+const updateStatistic = (dealerSum: number, playerSum: number, cards: number[]): Action => {
     return {
         type: ActionType.updateStatistic,
         payload: {
             roundResult: dealerSum === 0 ? '' : GetRoundResult(dealerSum, playerSum),
             remainingCards: cards.length
         }
-    }
-}
+    };
+};
 
-const resetStatistic = (cards) => {
+const resetStatistic = (cards: number[]): Action => {
     return {
         type: ActionType.resetStatistic,
         payload: {
             remainingCards: cards.length
         }
-    }
-}
+    };
+};
 
-const resetSummary = () => {
+const resetSummary = (): Action => {
     return {
         type: ActionType.resetRoundResult,
         payload: {
             roundEnd: false,
             result: ''
         }
-    }
-}
+    };
+};
 
 export {
     loadCards,
@@ -123,4 +124,4 @@ export {
     updateStatistic,
     resetStatistic,
     resetRoundEnd
-}
+};

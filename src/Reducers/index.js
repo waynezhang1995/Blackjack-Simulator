@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import ActionType from '../Actions/ActionTypes';
+import { actionType as ActionType } from '../Actions/ActionTypes';
 
 const cards = (state = [], action) => {
     switch (action.type) {

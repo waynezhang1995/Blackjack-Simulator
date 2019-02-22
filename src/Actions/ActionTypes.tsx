@@ -1,4 +1,9 @@
-export default {
+export interface Action {
+    type: string;
+    payload: any;
+}
+
+export const actionType = {
     loadCards: 'LOAD_CARDS',
     addDealerCard: 'ADD_DEALER_CARD',
     resetCards: 'REST_CARDS',
