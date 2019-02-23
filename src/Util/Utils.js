@@ -14,10 +14,22 @@ const Shuffle = (array) => {
 }
 
 const PrepareCards = (decks) => {
-    var base = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    const base = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    const suit = ['C', 'D', 'H', 'S'];
     var cards = [];
-    for (var i = 0; i < decks * 4; i++) {
-        cards = cards.concat(base)
+    var oneDeck = [];
+
+    for (var i = 0; i< base.length; i++) {
+        for (var j = 0; j< suit.length; j++) {
+            oneDeck.push({
+                number: base[i],
+                suit: suit[j]
+            });
+        }
+    }
+
+    for (var d = 0; d < decks; d++) {
+        cards = cards.concat(oneDeck)
     }
 
     return Shuffle(cards)
@@ -25,6 +37,7 @@ const PrepareCards = (decks) => {
 
 const GetCardsSum = (cards) => {
     var flipAce = false;
+    cards = cards.map((card) => card.number);
     cards = cards.map((card) => {
         switch (card) {
             case 'A':

@@ -1,7 +1,7 @@
 .card-body {
     max-width: 260px;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 168px;
     margin: 30px 20px 50px 0;
     border: 1px solid black;
 }
@@ -12,4 +12,223 @@
 
 .card-number {
     font-size: 30px;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.CA {
+    background-image: url("../../../Image/cards/AC.svg");
+}
+
+.DA {
+    background-image: url("../../../Image/cards/AD.svg");
+}
+
+.HA {
+    background-image: url("../../../Image/cards/AH.svg");
+}
+
+.SA {
+    background-image: url("../../../Image/cards/AS.svg");
+}
+
+.C2 {
+    background-image: url("../../../Image/cards/2C.svg");
+}
+
+.D2 {
+    background-image: url("../../../Image/cards/2D.svg");
+}
+
+.H2 {
+    background-image: url("../../../Image/cards/2H.svg");
+}
+
+.S2 {
+    background-image: url("../../../Image/cards/2S.svg");
+}
+
+.C3 {
+    background-image: url("../../../Image/cards/3C.svg");
+}
+
+.D3 {
+    background-image: url("../../../Image/cards/3D.svg");
+}
+
+.H3 {
+    background-image: url("../../../Image/cards/3H.svg");
+}
+
+.S3 {
+    background-image: url("../../../Image/cards/3S.svg");
+}
+
+.C4 {
+    background-image: url("../../../Image/cards/4C.svg");
+}
+
+.D4 {
+    background-image: url("../../../Image/cards/4D.svg");
+}
+
+.H4 {
+    background-image: url("../../../Image/cards/4H.svg");
+}
+
+.S4 {
+    background-image: url("../../../Image/cards/4S.svg");
+}
+
+.C5 {
+    background-image: url("../../../Image/cards/5C.svg");
+}
+
+.D5 {
+    background-image: url("../../../Image/cards/5D.svg");
+}
+
+.H5 {
+    background-image: url("../../../Image/cards/5H.svg");
+}
+
+.S5 {
+    background-image: url("../../../Image/cards/5S.svg");
+}
+
+.C6 {
+    background-image: url("../../../Image/cards/6C.svg");
+}
+
+.D6 {
+    background-image: url("../../../Image/cards/6D.svg");
+}
+
+.H6 {
+    background-image: url("../../../Image/cards/6H.svg");
+}
+
+.S6 {
+    background-image: url("../../../Image/cards/6S.svg");
+}
+
+.C7 {
+    background-image: url("../../../Image/cards/7C.svg");
+}
+
+.D7 {
+    background-image: url("../../../Image/cards/7D.svg");
+}
+
+.H7 {
+    background-image: url("../../../Image/cards/7H.svg");
+}
+
+.S7 {
+    background-image: url("../../../Image/cards/7S.svg");
+}
+
+.C8 {
+    background-image: url("../../../Image/cards/8C.svg");
+}
+
+.D8 {
+    background-image: url("../../../Image/cards/8D.svg");
+}
+
+.H8 {
+    background-image: url("../../../Image/cards/8H.svg");
+}
+
+.S8 {
+    background-image: url("../../../Image/cards/8S.svg");
+}
+
+.C9 {
+    background-image: url("../../../Image/cards/9C.svg");
+}
+
+.D9 {
+    background-image: url("../../../Image/cards/9D.svg");
+}
+
+.H9 {
+    background-image: url("../../../Image/cards/9H.svg");
+}
+
+.S9 {
+    background-image: url("../../../Image/cards/9S.svg");
+}
+
+.C10 {
+    background-image: url("../../../Image/cards/10C.svg");
+}
+
+.D10 {
+    background-image: url("../../../Image/cards/10D.svg");
+}
+
+.H10 {
+    background-image: url("../../../Image/cards/10H.svg");
+}
+
+.S10 {
+    background-image: url("../../../Image/cards/10S.svg");
+}
+
+.CJ {
+    background-image: url("../../../Image/cards/JC.svg");
+}
+
+.DJ {
+    background-image: url("../../../Image/cards/JD.svg");
+}
+
+.HJ {
+    background-image: url("../../../Image/cards/JH.svg");
+}
+
+.SJ {
+    background-image: url("../../../Image/cards/JS.svg");
+}
+
+.CQ {
+    background-image: url("../../../Image/cards/QC.svg");
+}
+
+.DQ {
+    background-image: url("../../../Image/cards/QD.svg");
+}
+
+.HQ {
+    background-image: url("../../../Image/cards/QH.svg");
+}
+
+.SQ {
+    background-image: url("../../../Image/cards/QS.svg");
+}
+
+.CK {
+    background-image: url("../../../Image/cards/KC.svg");
+}
+
+.DK {
+    background-image: url("../../../Image/cards/KD.svg");
+}
+
+.HK {
+    background-image: url("../../../Image/cards/KH.svg");
+}
+
+.SK {
+    background-image: url("../../../Image/cards/KS.svg");
+}
+
+.test {
+    background-image: url("../../../Image/cards/TC.svg");
 }

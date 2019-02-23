@@ -4,21 +4,20 @@ import "./Card.css"
 
 const css = {
     cardBody: 'card-body',
-    cardNumer: 'card-number',
-    cardContent: 'card-content'
+    card: 'card'
 };
 
 class CardBody extends Component {
 
+    getCrad() {
+        const { card } = this.props;
+        return css.card + ' ' + card.suit + card.number;
+    }
+
     render() {
-        const { number } = this.props;
         return (
             <Card className={css.cardBody}>
-                <div className={css.cardContent}>
-                    <span className={css.cardNumer}>
-                        {number}
-                    </span>
-                </div>
+                <div className={this.getCrad()}></div>
             </Card>
         );
     }
