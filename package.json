@@ -2,6 +2,7 @@
   "name": "blackjack-simulator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://waynezhang1995.github.io/Blackjack-Simulator",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -26,7 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tslint": "tslint -c tslint.json 'src/**/*.tsx'"
+    "tslint": "tslint -c tslint.json 'src/**/*.tsx'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +39,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
