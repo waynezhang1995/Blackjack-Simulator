@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import StatisticPanel from '../Presentational/StatisticPanel.js';
+import StatisticPanel from '../Presentational/StatisticPanel';
 
 const mapStateToProps = (state, ownProps) => ({
     ...ownProps,
