@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Card from '../../Card/Presentational/Card.js';
-import { GetCardsSum } from '../../../Util/Utils.js';
+import Card from '../../Card/Presentational/Card';
+import { GetCardsSum } from '../../../Util/Utils';
 import GameEndDialog from '../../GameEndDialog/GameEndDialog';
 import './Board.css';
 
