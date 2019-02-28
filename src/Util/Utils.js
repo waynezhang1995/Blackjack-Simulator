@@ -37,6 +37,7 @@ const PrepareCards = (decks) => {
 
 const GetCardsSum = (cards) => {
     var flipAce = false;
+
     cards = cards.map((card) => card.number);
     cards = cards.map((card) => {
         switch (card) {

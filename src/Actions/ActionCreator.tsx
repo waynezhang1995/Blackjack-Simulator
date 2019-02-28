@@ -18,39 +18,29 @@ const resetCards = (): Action => {
     };
 };
 
-const drawDealerCard = (cards: number[]): Action => {
-    const index = Math.floor(Math.random() * cards.length);
-    const dealerCard = cards[index];
-
+const drawDealerCard = (cards: object[]): Action => {
     return {
         type: ActionType.addDealerCard,
         payload: {
-            card: [dealerCard],
-            position: index
+            card: [cards.shift()],
         }
     };
 };
 
-const drawPlayerCard = (cards: number[]): Action => {
-    const index = Math.floor(Math.random() * cards.length);
-    const playCard = cards[index];
+const drawPlayerCard = (cards: object[]): Action => {
     return {
         type: ActionType.addPlayerCard,
         payload: {
-            card: [playCard],
-            position: index
+            card: [cards.shift()],
         }
     };
 };
 
-const dealerDrawToSeventeen = (cards: number[], dealerCards: number[]): Action => {
-    const indexes = [];
+const dealerDrawToSeventeen = (cards: object[], dealerCards: object[]): Action => {
     let total = 0;
 
-    while (total < 17) {
-        const index = Math.floor(Math.random() * cards.length);
-        const nextDealerCard = cards[index];
-        indexes.push(index);
+    while (total < 17 && cards.length > 0) {
+        const nextDealerCard = cards.shift();
         dealerCards = dealerCards.concat([nextDealerCard]);
         total = GetCardsSum(dealerCards).sum;
     }
@@ -59,7 +49,6 @@ const dealerDrawToSeventeen = (cards: number[], dealerCards: number[]): Action =
         type: ActionType.dealerDrawToSeventeen,
         payload: {
             cards: dealerCards,
-            position: indexes
         }
     };
 };

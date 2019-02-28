@@ -7,23 +7,10 @@ const cards = (state = [], action) => {
             return action.payload
         case ActionType.addDealerCard:
         case ActionType.addPlayerCard:
-            var cards = state;
-            const index = action.payload.position;
-            if (index > -1) {
-                cards.splice(index, 1);
-            }
-            return cards
         case ActionType.dealerDrawToSeventeen:
-            cards = state;
-            const indexes = action.payload.position;
-            indexes.forEach((index) => {
-                if (index > -1) {
-                    cards.splice(index, 1);
-                }
-            });
-            return cards
+            return state;
         default:
-            return state
+            return state;
     }
 }
 

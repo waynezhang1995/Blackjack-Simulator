@@ -1,20 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, CSSProperties } from 'react';
 import Paper from '@material-ui/core/Paper';
-import "./SummaryPanel.css"
+import './SummaryPanel.css';
+
+export interface SummaryPanelProps {
+    displayStyle: CSSProperties;
+    playerTotal: String;
+    dealerTotal: Number;
+    roundResult: {
+        roundEnd: Boolean,
+        result: String
+    };
+}
 
 const css = {
     SummaryPanelBody: 'summary-panel-body',
     summarySection: 'summary-section'
 };
 
-class SummaryPanel extends Component {
+class SummaryPanel extends Component<SummaryPanelProps, {}> {
     render() {
-        const { display, playerTotal, dealerTotal, roundResult } = this.props;
+        const { displayStyle, playerTotal, dealerTotal, roundResult } = this.props;
         const { roundEnd, result } = roundResult;
 
         return (
             <div>
-                <Paper style={{ display: display }} className={css.SummaryPanelBody} elevation={3}>
+                <Paper style={displayStyle} className={css.SummaryPanelBody} elevation={3}>
                     <div className={css.summarySection}>
                         <p>Dealer has: {dealerTotal}</p>
                         <p>Player has: {playerTotal}</p>

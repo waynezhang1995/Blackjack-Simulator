@@ -1,4 +1,4 @@
-import React, { Component, SyntheticEvent } from 'react';
+import React, { Component, MouseEventHandler } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -10,7 +10,7 @@ import './WelcomeDialog.css';
 
 interface WelcomeDialogProps {
     open: boolean;
-    onStartGameClick: React.MouseEventHandler<HTMLButtonElement>;
+    onStartGameClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 const blackJackHelper = 'https://www.bicyclecards.com/how-to-play/blackjack/';
