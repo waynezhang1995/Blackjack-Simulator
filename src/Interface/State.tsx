@@ -1,15 +1,15 @@
 export default interface AppState {
-    cards: Object[],
-    dealerCards: Number[],
-    playerCards: Number[],
+    cards: Object[];
+    dealerCards: number[];
+    playerCards: number[];
     roundResult: {
         roundEnd: Boolean,
         result: String
-    },
+    };
     statistic: {
-        dealerWinCount: Number,
-        playerWinCount: Number,
-        tieCount: Number,
-        remainingCards: Number,
-    }
+        dealerWinCount: number,
+        playerWinCount: number,
+        tieCount: number,
+        remainingCards: number,
+    };
 }
