@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "d2e8a6b96b904265ba8a5e1223d374bf",
-    "url": "/Blackjack-Simulator/static/media/7C.d2e8a6b9.svg"
+    "revision": "30ff4b8ad4e6896c4ad21cae4018d7d8",
+    "url": "/Blackjack-Simulator/static/media/7D.30ff4b8a.svg"
   },
   {
-    "revision": "3958d68c3b2c2d78e37b",
+    "revision": "abe16431e83b96838d51",
     "url": "/Blackjack-Simulator/static/css/main.1ad6b9a0.chunk.css"
   },
   {
@@ -16,20 +16,24 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/js/2.f647f4ad.chunk.js"
   },
   {
+    "revision": "c6985df3fb514d0685cc27f8acc218c0",
+    "url": "/Blackjack-Simulator/static/media/AD.c6985df3.svg"
+  },
+  {
     "revision": "dc5e22922b5bc6d69388163019454995",
     "url": "/Blackjack-Simulator/static/media/AC.dc5e2292.svg"
   },
   {
-    "revision": "c6985df3fb514d0685cc27f8acc218c0",
-    "url": "/Blackjack-Simulator/static/media/AD.c6985df3.svg"
+    "revision": "20924e830be37186fac5e62b211344d9",
+    "url": "/Blackjack-Simulator/static/media/AH.20924e83.svg"
   },
   {
     "revision": "6db59a9a08a076442cf83140ea54a200",
     "url": "/Blackjack-Simulator/static/media/AS.6db59a9a.svg"
   },
   {
-    "revision": "20924e830be37186fac5e62b211344d9",
-    "url": "/Blackjack-Simulator/static/media/AH.20924e83.svg"
+    "revision": "1c8adbb3a417e2cd9d2c6e7d7514fad4",
+    "url": "/Blackjack-Simulator/static/media/2D.1c8adbb3.svg"
   },
   {
     "revision": "2ebae580363cb1eaa8a9dadf556292c6",
@@ -42,10 +46,6 @@ self.__precacheManifest = [
   {
     "revision": "e8c6e1db28ba36c9da50abdf43ab7a60",
     "url": "/Blackjack-Simulator/static/media/2S.e8c6e1db.svg"
-  },
-  {
-    "revision": "1c8adbb3a417e2cd9d2c6e7d7514fad4",
-    "url": "/Blackjack-Simulator/static/media/2D.1c8adbb3.svg"
   },
   {
     "revision": "fede85e4618bd869222837923c70f473",
@@ -64,12 +64,16 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/3S.1da91887.svg"
   },
   {
-    "revision": "cb60aa7c6fd30b1cd0a41a9c45f0144f",
-    "url": "/Blackjack-Simulator/static/media/4H.cb60aa7c.svg"
+    "revision": "e1dfc148022183fab7aa33d0733bd23e",
+    "url": "/Blackjack-Simulator/static/media/4C.e1dfc148.svg"
   },
   {
     "revision": "5347d506886a379bf05bcb15cb9c6831",
     "url": "/Blackjack-Simulator/static/media/4D.5347d506.svg"
+  },
+  {
+    "revision": "cb60aa7c6fd30b1cd0a41a9c45f0144f",
+    "url": "/Blackjack-Simulator/static/media/4H.cb60aa7c.svg"
   },
   {
     "revision": "3e78de896442be95c02b8d7d857c83e2",
@@ -80,10 +84,6 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/5C.b8fab0f2.svg"
   },
   {
-    "revision": "e1dfc148022183fab7aa33d0733bd23e",
-    "url": "/Blackjack-Simulator/static/media/4C.e1dfc148.svg"
-  },
-  {
     "revision": "434286e8a29af9ef49a799838e60afae",
     "url": "/Blackjack-Simulator/static/media/5D.434286e8.svg"
   },
@@ -92,32 +92,36 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/5H.d64b8d5b.svg"
   },
   {
-    "revision": "dc1e4d33098b3aa0adc155afea645869",
-    "url": "/Blackjack-Simulator/static/media/6C.dc1e4d33.svg"
+    "revision": "93a9b3e86980b6fb9201aa5e6d60a680",
+    "url": "/Blackjack-Simulator/static/media/6D.93a9b3e8.svg"
   },
   {
     "revision": "74c699bbb2afa28916d82362de44f515",
     "url": "/Blackjack-Simulator/static/media/5S.74c699bb.svg"
   },
   {
-    "revision": "93a9b3e86980b6fb9201aa5e6d60a680",
-    "url": "/Blackjack-Simulator/static/media/6D.93a9b3e8.svg"
+    "revision": "dc1e4d33098b3aa0adc155afea645869",
+    "url": "/Blackjack-Simulator/static/media/6C.dc1e4d33.svg"
   },
   {
     "revision": "8875fac43aa7c0d6aaa76e389d9d10bf",
     "url": "/Blackjack-Simulator/static/media/6H.8875fac4.svg"
   },
   {
-    "revision": "30ff4b8ad4e6896c4ad21cae4018d7d8",
-    "url": "/Blackjack-Simulator/static/media/7D.30ff4b8a.svg"
+    "revision": "0d7fd9f2a618cb69863a0b07569e47b6",
+    "url": "/Blackjack-Simulator/static/media/6S.0d7fd9f2.svg"
+  },
+  {
+    "revision": "d2e8a6b96b904265ba8a5e1223d374bf",
+    "url": "/Blackjack-Simulator/static/media/7C.d2e8a6b9.svg"
+  },
+  {
+    "revision": "abe16431e83b96838d51",
+    "url": "/Blackjack-Simulator/static/js/main.abe16431.chunk.js"
   },
   {
     "revision": "8b3adf08a1e342f31325ce69039df311",
     "url": "/Blackjack-Simulator/static/media/7H.8b3adf08.svg"
-  },
-  {
-    "revision": "3958d68c3b2c2d78e37b",
-    "url": "/Blackjack-Simulator/static/js/main.3958d68c.chunk.js"
   },
   {
     "revision": "8343d3ef5d3ac1728325e1e59b0337e9",
@@ -132,48 +136,44 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/8D.3ce263b6.svg"
   },
   {
-    "revision": "a3d87fdd268a3652c6525a50e861fa35",
-    "url": "/Blackjack-Simulator/static/media/8H.a3d87fdd.svg"
-  },
-  {
     "revision": "dfeb4fd51eaf7cf97544d70257040f23",
     "url": "/Blackjack-Simulator/static/media/8S.dfeb4fd5.svg"
   },
   {
-    "revision": "0d7fd9f2a618cb69863a0b07569e47b6",
-    "url": "/Blackjack-Simulator/static/media/6S.0d7fd9f2.svg"
-  },
-  {
-    "revision": "82ad06e86707d5a25010878024c69932",
-    "url": "/Blackjack-Simulator/static/media/9D.82ad06e8.svg"
+    "revision": "a3d87fdd268a3652c6525a50e861fa35",
+    "url": "/Blackjack-Simulator/static/media/8H.a3d87fdd.svg"
   },
   {
     "revision": "dbc1a11e649b59092a177e04bb7e7ad8",
     "url": "/Blackjack-Simulator/static/media/9C.dbc1a11e.svg"
   },
   {
-    "revision": "bd17caf676aa2c5fb42b49559f7a56d5",
-    "url": "/Blackjack-Simulator/static/media/10C.bd17caf6.svg"
-  },
-  {
-    "revision": "7e448065fd60c3c91e3de947a9467d55",
-    "url": "/Blackjack-Simulator/static/media/10D.7e448065.svg"
-  },
-  {
-    "revision": "6318c689d091036b48eb2e1966ac3f3c",
-    "url": "/Blackjack-Simulator/static/media/9S.6318c689.svg"
+    "revision": "82ad06e86707d5a25010878024c69932",
+    "url": "/Blackjack-Simulator/static/media/9D.82ad06e8.svg"
   },
   {
     "revision": "3ac1dc8446a9dfcd5addf3f1c5e978f7",
     "url": "/Blackjack-Simulator/static/media/9H.3ac1dc84.svg"
   },
   {
-    "revision": "51c55f0947ec7f522bbb4897763fb85e",
-    "url": "/Blackjack-Simulator/static/media/10S.51c55f09.svg"
+    "revision": "bd17caf676aa2c5fb42b49559f7a56d5",
+    "url": "/Blackjack-Simulator/static/media/10C.bd17caf6.svg"
+  },
+  {
+    "revision": "6318c689d091036b48eb2e1966ac3f3c",
+    "url": "/Blackjack-Simulator/static/media/9S.6318c689.svg"
+  },
+  {
+    "revision": "7e448065fd60c3c91e3de947a9467d55",
+    "url": "/Blackjack-Simulator/static/media/10D.7e448065.svg"
   },
   {
     "revision": "144151555c69dc2a3ebba434b22d4e52",
     "url": "/Blackjack-Simulator/static/media/10H.14415155.svg"
+  },
+  {
+    "revision": "51c55f0947ec7f522bbb4897763fb85e",
+    "url": "/Blackjack-Simulator/static/media/10S.51c55f09.svg"
   },
   {
     "revision": "68a1f57ba3dc6fc4382c5086359d4026",
@@ -184,20 +184,20 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/JH.30ac8789.svg"
   },
   {
-    "revision": "088020790936dd98378318aa0cb4aca2",
-    "url": "/Blackjack-Simulator/static/media/JS.08802079.svg"
-  },
-  {
     "revision": "b9743a692c94a6f24e1612722f389cda",
     "url": "/Blackjack-Simulator/static/media/JC.b9743a69.svg"
   },
   {
-    "revision": "027853d326e3728f42efb425a68032c1",
-    "url": "/Blackjack-Simulator/static/media/QH.027853d3.svg"
+    "revision": "088020790936dd98378318aa0cb4aca2",
+    "url": "/Blackjack-Simulator/static/media/JS.08802079.svg"
   },
   {
     "revision": "20b2b104de7e432cc967d103c1382891",
     "url": "/Blackjack-Simulator/static/media/QD.20b2b104.svg"
+  },
+  {
+    "revision": "027853d326e3728f42efb425a68032c1",
+    "url": "/Blackjack-Simulator/static/media/QH.027853d3.svg"
   },
   {
     "revision": "656da757dead3704115698d21d962b28",
@@ -216,10 +216,6 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/KD.95d58638.svg"
   },
   {
-    "revision": "bd17caf676aa2c5fb42b49559f7a56d5",
-    "url": "/Blackjack-Simulator/static/media/TC.bd17caf6.svg"
-  },
-  {
     "revision": "9467ef4b3bc888ffab9164a6644676fd",
     "url": "/Blackjack-Simulator/static/media/KH.9467ef4b.svg"
   },
@@ -228,7 +224,11 @@ self.__precacheManifest = [
     "url": "/Blackjack-Simulator/static/media/KS.e8f980f6.svg"
   },
   {
-    "revision": "2a81c320521b49abe8a444b67fc4c51a",
+    "revision": "bd17caf676aa2c5fb42b49559f7a56d5",
+    "url": "/Blackjack-Simulator/static/media/TC.bd17caf6.svg"
+  },
+  {
+    "revision": "f5a613f1ea9556b3a4785d16da6caba2",
     "url": "/Blackjack-Simulator/index.html"
   }
 ];
