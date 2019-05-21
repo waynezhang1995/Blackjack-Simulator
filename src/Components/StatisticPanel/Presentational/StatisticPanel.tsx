@@ -46,7 +46,6 @@ class StatisticPanel extends Component<StatisticPanelProps, {}> {
                         <p>Player win count: {playerWinCount}</p>
                         <p>Tie count: {tieCount}</p>
                         {endShoeSummary ? '' : (<p>Remaining cards: {remainingCards}</p>)}
-
                     </div>
                 </Paper>
             </div>

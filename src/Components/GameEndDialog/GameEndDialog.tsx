@@ -4,7 +4,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import Fab from '@material-ui/core/Fab';
-import StatisticPanelContainer from '../StatisticPanel/Container/StatisticPanel.js';
+import StatisticPanelContainer from '../StatisticPanel/Container/StatisticPanel';
 import './GameEndDialog.css';
 
 interface GameEndDialogProps {
