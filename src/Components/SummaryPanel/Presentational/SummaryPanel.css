@@ -7,3 +7,14 @@
     padding: 5px 5px 5px 30px;
     text-align: left;
 }
+
+/* media query for different screen size */
+
+@media screen and (max-height: 750px) {
+    .summary-panel-body {
+        position: absolute;
+        top: 373px;
+        right: 70px;
+        width: 200px;
+    }
+}
