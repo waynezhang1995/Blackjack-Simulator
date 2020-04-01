@@ -1,14 +1,14 @@
 {
-  "main.css": "/Blackjack-Simulator/static/css/main.18586f6f.chunk.css",
-  "main.js": "/Blackjack-Simulator/static/js/main.9dbe0a24.chunk.js",
-  "main.js.map": "/Blackjack-Simulator/static/js/main.9dbe0a24.chunk.js.map",
+  "main.css": "/Blackjack-Simulator/static/css/main.f439952a.chunk.css",
+  "main.js": "/Blackjack-Simulator/static/js/main.047880f2.chunk.js",
+  "main.js.map": "/Blackjack-Simulator/static/js/main.047880f2.chunk.js.map",
   "runtime~main.js": "/Blackjack-Simulator/static/js/runtime~main.75f20f9c.js",
   "runtime~main.js.map": "/Blackjack-Simulator/static/js/runtime~main.75f20f9c.js.map",
   "static/js/2.f647f4ad.chunk.js": "/Blackjack-Simulator/static/js/2.f647f4ad.chunk.js",
   "static/js/2.f647f4ad.chunk.js.map": "/Blackjack-Simulator/static/js/2.f647f4ad.chunk.js.map",
   "index.html": "/Blackjack-Simulator/index.html",
-  "precache-manifest.90b5280f940bafe8a5fd103bb335dc30.js": "/Blackjack-Simulator/precache-manifest.90b5280f940bafe8a5fd103bb335dc30.js",
+  "precache-manifest.3b2696f4b547e481343c85408a8fd403.js": "/Blackjack-Simulator/precache-manifest.3b2696f4b547e481343c85408a8fd403.js",
   "service-worker.js": "/Blackjack-Simulator/service-worker.js",
-  "static/css/main.18586f6f.chunk.css.map": "/Blackjack-Simulator/static/css/main.18586f6f.chunk.css.map",
+  "static/css/main.f439952a.chunk.css.map": "/Blackjack-Simulator/static/css/main.f439952a.chunk.css.map",
   "static/media/Card.css": "/Blackjack-Simulator/static/media/TC.bd17caf6.svg"
 }
